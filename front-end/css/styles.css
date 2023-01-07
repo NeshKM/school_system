@@ -1,0 +1,100 @@
+body {
+  background-color: #edefee;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  /* margin: 5%; */
+    text-align: center;
+  padding: 2%;
+}
+
+.logo {
+  height: 75px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+header {
+  display: flex;
+  margin-bottom: 10px;
+  margin-bottom: 10px;
+  /* display: grid;
+  grid-template-columns: 1f 2f;
+  grid-template-areas: "header" "div"; */
+}
+header div {
+  flex: 1;
+  /* display: inline-block;
+  margin-left: auto;
+  margin-right: auto; */
+}
+
+nav {
+  max-height: fit-content;
+}
+
+.card {
+  max-width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.admin-profile {
+  height: 75px;
+  width: 75px;
+  text-align: center;
+  border-radius: 50px;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #f8f9fa;
+  height: auto;
+  width: 100vw;
+  padding-top: 40px;
+  color: #111;
+}
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+.login_page {
+  padding-top: 20px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+div > ul .socials {
+  margin: 10px auto auto auto;
+  list-style: none;
+  display: flex;
+}
+div li {
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+}
+div li a {
+  text-decoration: none;
+}
+div li a:hover {
+  text-decoration: none;
+  color: black;
+}
+
+.login_footer {
+  display: flex;
+}
+
+.login_footer div {
+  flex: 1;
+}
+
+.list-group button a {
+  text-decoration: none;
+}
