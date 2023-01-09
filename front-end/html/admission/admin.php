@@ -204,6 +204,7 @@ include './admin_header.php';
                                                             <select name="class">
                                                                 <option value="pp1" name="class">PP 1</option>
                                                                 <option value="pp2" name="class">PP 2</option>
+                                                                <option value="pp3" name="class">PP 3</option>
                                                                 <option value="grade_1" name="class">Grade 1</option>
                                                                 <option value="grade_2" name="class">Grade 2</option>
                                                                 <option value="grade_3" name="class">Grade 3</option>

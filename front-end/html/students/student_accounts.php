@@ -1,3 +1,30 @@
+<?php
+
+// include '../../../backend/handle_login.php';
+
+// session_start();
+
+// // check if user has looged in?
+
+// if ($_SESSION["loggedin"]!==true ){
+
+//    header("location:../login.php");
+//    exit();
+// }
+
+
+// $_SESSION["first_name"];
+// $_SESSION["second_name"];
+// $_SESSION["date_of_birth"];
+// $_SESSION["class"];
+// $_SESSION["gender"];
+// $_SESSION["phone"];
+// $_SESSION["email"];
+// $_SESSION["role"];
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -26,7 +53,7 @@
     </div>
     <div>
       <h1>
-        PETER MUNENE
+        <?php echo $_SESSION["first_name"] ." ". $_SESSION["second_name"] ?>
       </h1>
     </div>
   </header>
@@ -61,6 +88,10 @@
       <li class="nav-item" role="presentation">
         <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button"
           role="tab" aria-controls="profile-tab-pane" aria-selected="false">My Profile</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="message-tab" data-bs-toggle="tab" data-bs-target="#message-tab-pane" type="button"
+          role="tab" aria-controls="message-tab-pane" aria-selected="false">Contact Us</button>
       </li>
 
     </ul>
@@ -525,12 +556,8 @@
         <table class="table text-center table-bordered table-hover">
 
           <tbody>
-            <!-- <tr>
-                      <td colspan="100%">
-                          my 
-                      </td>
-                     
-                  </tr> -->
+
+
 
             <tr>
               <td colspan="100%"><img src="../../images/undraw_profile.svg" alt="" class="img-fluid"
@@ -538,35 +565,86 @@
             </tr>
             <tr>
               <td>First Name :</td>
-              <td>Peter</td>
+              <td> <?php echo $_SESSION["first_name"];?></td>
             </tr>
             <tr>
               <td>Second Name :</td>
-              <td>Munene</td>
+              <td><?php echo $_SESSION["second_name"];?></td>
             </tr>
             <tr>
               <td>Class :</td>
-              <td>Grade 7</td>
+              <td><?php echo $_SESSION["class"];?></td>
             </tr>
             <tr>
               <td>Gender :</td>
-              <td>Male</td>
+              <td><?php echo $_SESSION["gender"];?></td>
             </tr>
             <tr>
               <td>Date of Birth :</td>
-              <td>08-12-2009</td>
+              <td><?php $_SESSION["date_of_birth"] ;?></td>
             </tr>
             <tr>
               <td>Phone :</td>
-              <td>+254777777777</td>
+              <td><?php echo $_SESSION["phone"];?></td>
             </tr>
             <tr>
               <td>Email :</td>
-              <td>peter@gmail.com</td>
+              <td><?php echo $_SESSION["email"];?></td>
             </tr>
+
+
 
           </tbody>
         </table>
+      </div>
+      <div class="tab-pane fade" id="message-tab-pane" role="tabpanel" aria-labelledby="message-tab" tabindex="0">
+
+        <h3 class="text-center">Contact Us</h3>
+
+        <form action="../../../backend/handle_messages.php" method="POST">
+          <div class="card text-center" style="margin-left: auto;margin-right:auto;">
+
+            <div class="card-header">Messages</div>
+            <div class="card-body ">
+              <div class="form-group row m-2">
+                <label for="first_name" class="col-sm-2 col-form-label col-form-label-lg">Name </label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control form-control-lg" id="first_name" placeholder="Name"
+                    name="first_name" required>
+                </div>
+              </div>
+
+              <div class="form-group row m-2">
+                <label for="email" class="col-sm-2 col-form-label col-form-label-lg">Email </label>
+                <div class="col-sm-10">
+                  <input type="email" class="form-control form-control-lg" id="email" placeholder="Email" name="email"
+                    required>
+                </div>
+              </div>
+              <div class="form-group row m-2">
+                <label for="subject" class="col-sm-2 col-form-label col-form-label-lg">Subject </label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control form-control-lg" id="subject" placeholder="Subject"
+                    name="subject" required>
+                </div>
+              </div>
+              <div class="form-group row m-2">
+                <label for="message" class="col-sm-2 col-form-label col-form-label-lg">Message </label>
+                <div class="form-outline col-sm-10 mb-4">
+                  <textarea class="form-control form-control-lg" id="message" rows="4"
+                    placeholder="Message...."></textarea>
+
+                </div>
+              </div>
+
+
+              <button type="submit" name="send" class="btn btn-primary btn-block mb-4">
+                Send
+              </button>
+            </div>
+
+          </div>
+        </form>
       </div>
     </div>
   </main>

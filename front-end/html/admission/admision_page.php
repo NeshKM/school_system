@@ -74,10 +74,73 @@ include './admin_header.php';
       </div>
    </div>
    </div>
+   <main class="login_page">
+   
+      <form action="../../backend/handle_user_registration.php" method="POST">
+         <div class="card text-center" style="margin-left: auto;margin-right:auto;">
 
+            <div class="card-header">Registered staff</div>
+            <div class="card-body ">
+               <div class="form-group row m-1">
+                  <label for="first_name" class="col-sm-2 col-form-label col-form-label-lg">First Name </label>
+                  <div class="col-sm-10">
+                     <input type="text" class="form-control form-control-lg" id="first_name" placeholder="First Name"
+                        name="first_name" required>
+                  </div>
+               </div>
+               <div class="form-group row m-1">
+                  <label for="second_name" class="col-sm-2 col-form-label col-form-label-lg">First Name </label>
+                  <div class="col-sm-10">
+                     <input type="text" class="form-control form-control-lg" id="second_name" placeholder="Second Name"
+                        name="second_name" required>
+                  </div>
+               </div>
+               <div class="form-group row m-1">
+                  <label for="date_of_birth" class="col-sm-2 col-form-label col-form-label-lg">Date Of Birth </label>
+                  <div class="col-sm-10">
+                     <input type="date" class="form-control form-control-lg" id="date_of_birth"
+                        placeholder="Date Of Birth" name="date_of_birth" required>
+                  </div>
+               </div>
+               <div class="form-group row m-1">
+                  <label for="gender" class="col-sm-2 col-form-label col-form-label-lg">Gender </label>
+                  <div class="col-sm-10">
+                     <select name="gender" id="gender" class="form-control form-control-lg">
+                        <option value="male" name="gender">Male</option>
+                        <option value="female" name="gender">Female</option>
+                        <option value="other" name="gender">Other</option>
+                     </select>
+                  </div>
+               </div>
 
-
-   <h1>Addmission page</h1>
+               <div class="form-group row m-1">
+                  <label for="phone" class="col-sm-2 col-form-label col-form-label-lg">Phone No </label>
+                  <div class="col-sm-10">
+                     <input type="tel" class="form-control form-control-lg" id="phone"
+                        placeholder="Phone No" name="phone" required>
+                  </div>
+               </div>
+               <div class="form-group row m-1">
+                  <label for="email" class="col-sm-2 col-form-label col-form-label-lg">Email </label>
+                  <div class="col-sm-10">
+                     <input type="email" class="form-control form-control-lg" id="email"
+                        placeholder="Email" name="email" required>
+                  </div>
+               </div>
+               <div class="form-group row m-1" >
+                  <label for="password" class="col-sm-2 col-form-label col-form-label-lg">Password </label>
+                  <div class="col-sm-10">
+                     <input type="password" class="form-control form-control-lg" id="password"
+                        placeholder="Password" name="password" required>
+                  </div>
+               </div>
+           
+            <button type="submit" name="admit" class="btn btn-primary">Admit</button>
+         </div>
+         <div class="card-footer"><b>Thank you!</b></div>
+         </div>
+      </form>
+   </main>
 
    <?php
    include '../footer.php';
