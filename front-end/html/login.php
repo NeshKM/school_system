@@ -19,23 +19,24 @@
       <div>
         <h1>WELCOME</h1>
       </div>
+      <form action="../../backend/handle_login.php" method="POST">
       <div class="card text-center mt-5">
        
         <div class="card-header">Registered Students</div>
         <div class="card-body">
           <form action="" class="m-1">
-            <div class="m-1">Reg No : <input type="text" name="reg_no" /></div>
+            <div class="m-1">Email : <input type="email" name="email" required/></div>
             <div class="m-1">
-              Password : <input type="password" name="password" id="" />
+              Password : <input type="password" name="password" id="" minlength="6" required/>
             </div>
             <div>
-              <input type="submit" value="Sign in" />
+              <input type="submit" name="login" value="Sign in" />
             </div>
           </form>
         </div>
         <div class="card-footer"><b>Thank you!</b></div>
       </div>
-  
+      </form>
     </main>
  
 <?php
