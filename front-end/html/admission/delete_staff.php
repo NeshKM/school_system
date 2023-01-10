@@ -76,7 +76,7 @@ if (isset($_POST["submit_delete"]) and !empty($_POST["id"])) {
     $sql_delete = "DELETE FROM `users` WHERE id='$id' ";
     $result = mysqli_query($link, $sql_delete);
 
-
+m
 
 
 
