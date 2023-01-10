@@ -21,7 +21,22 @@
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
 </head>
 <body>
+<header>
+      <div class="col-2">
+         <a class="" href="home.html"><img src="../../images/laravel.png" alt="logo" class="img-fluid logo"></a>
 
+      </div>
+      <div>
+         <h1>JEPPE PRIMARY SCHOOL</h1>
+      </div>
+      <div>
+         <h1>
+            <?php echo $_SESSION['first_name']." ".$_SESSION['second_name']; ?>
+         </h1>
+      </div>
+   </header>
+   <hr>
+   <hr>
 <?php
 
 
@@ -170,6 +185,9 @@ if (isset($_POST["update"])) {
         </div>
     </div>
 </div>
+<?php
+   include '../footer.php';
+   ?>
 </body>
 <?php
 
