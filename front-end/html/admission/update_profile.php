@@ -65,7 +65,7 @@ if (isset($_POST["update"])) {
 
         echo "<div class='row m-2 text-center'>";
         echo "<p class='alert alert-success'>Records have been updated!</p>";
-        echo "<a class='btn btn-primary col-md-4' href='view.php'>BACK</a>";
+        echo "<a class='btn btn-primary col-md-4' href='all_staff.php'>BACK</a>";
         echo "</div>";
     } else {
         echo "Error executing query $up_sql" . mysqli_error($link);
@@ -104,7 +104,7 @@ if (isset($_POST["update"])) {
 <div class="row m-2">
     <div class="card">
         <div class="card-body">
-            <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]) ?>" method="post"
+            <form action="update_profile.php" method="post"
                 enctype="multipart/form-data">
                 <div class="row p-2">
                     <div class="col-md-12">
@@ -172,7 +172,8 @@ if (isset($_POST["update"])) {
                     <div class="col-md-12">
 
                         <input class="btn btn-primary col-md-4" type="submit" name="update" value="UPDATE">
-                        <input  class="btn btn-primary col-md-4" type="button" value="Go back!" onclick="history.back()">
+                        <a href="./all_staff.php">Back</a>
+                        <!-- <input  class="btn btn-primary col-md-4" type="button" value="Go back!" onclick="history.back()"> -->
 
                     </div>
 
