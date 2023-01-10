@@ -55,12 +55,14 @@ include './admin_header.php';
                         <div class="m-1">
                            Password : <input type="password" name="password" id="password" />
                         </div>
-                        <label for="role">Role :</label>
-                        <select name="role" id="role">
-                           <option value="admin" name="role">Admin</option>
-                           <option value="staff" name="role">Staff</option>
+                        <div>
+                           <label for="role">Role :</label>
+                           <select name="role" id="role">
+                              <option value="admin" name="role">Admin</option>
+                              <option value="staff" name="role">Staff</option>
 
-                        </select>
+                           </select>
+                        </div>
                   </div>
                </div>
                <div class="card-footer"><b>Click admit to continue!</b></div>
@@ -75,7 +77,7 @@ include './admin_header.php';
    </div>
    </div>
    <main class="login_page">
-   
+
       <form action="../../backend/handle_user_registration.php" method="POST">
          <div class="card text-center" style="margin-left: auto;margin-right:auto;">
 
@@ -116,28 +118,28 @@ include './admin_header.php';
                <div class="form-group row m-1">
                   <label for="phone" class="col-sm-2 col-form-label col-form-label-lg">Phone No </label>
                   <div class="col-sm-10">
-                     <input type="tel" class="form-control form-control-lg" id="phone"
-                        placeholder="Phone No" name="phone" required>
+                     <input type="tel" class="form-control form-control-lg" id="phone" placeholder="Phone No"
+                        name="phone" required>
                   </div>
                </div>
                <div class="form-group row m-1">
                   <label for="email" class="col-sm-2 col-form-label col-form-label-lg">Email </label>
                   <div class="col-sm-10">
-                     <input type="email" class="form-control form-control-lg" id="email"
-                        placeholder="Email" name="email" required>
+                     <input type="email" class="form-control form-control-lg" id="email" placeholder="Email"
+                        name="email" required>
                   </div>
                </div>
-               <div class="form-group row m-1" >
+               <div class="form-group row m-1">
                   <label for="password" class="col-sm-2 col-form-label col-form-label-lg">Password </label>
                   <div class="col-sm-10">
-                     <input type="password" class="form-control form-control-lg" id="password"
-                        placeholder="Password" name="password" required>
+                     <input type="password" class="form-control form-control-lg" id="password" placeholder="Password"
+                        name="password" required>
                   </div>
                </div>
-           
-            <button type="submit" name="admit" class="btn btn-primary">Admit</button>
-         </div>
-         <div class="card-footer"><b>Thank you!</b></div>
+
+               <button type="submit" name="admit" class="btn btn-primary">Admit</button>
+            </div>
+            <div class="card-footer"><b>Thank you!</b></div>
          </div>
       </form>
    </main>

@@ -76,7 +76,7 @@ include './admin_header.php';
                     <hr class="sidebar-divider">
 
                     <li class="nav-item stylenav">
-                        <a class="nav-link" href="#">
+                        <a class="nav-link" href="../../../backend/logout.php">
                             <i class="fa fa-sign-out fa-lg text-white"></i>
                             <span class="text-white">Log out</span>
 
@@ -93,10 +93,10 @@ include './admin_header.php';
                     <div class="col-7">
                         <nav class="navbar navbar-light">
                             <div class="container-fluid">
-                                <form class="d-flex">
-                                    <input class="col-8 form-control me-2" type="search" placeholder="Search for ... "
+                                <form class="d-flex" action="../../../backend/search.php" method="POST">
+                                    <input class="col-8 form-control me-2" type="search" name="query" placeholder="Search for ... "
                                         aria-label="Search">
-                                    <button class="btn btn-outline-primary" type="submit">Search</button>
+                                    <button class="btn btn-outline-primary" name="seach" type="submit">Search</button>
                                 </form>
                             </div>
                         </nav>

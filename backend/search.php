@@ -1,21 +1,51 @@
-
 <?php
-include "./classes_header.php";
+include 'config.php';
+include '../front-end/html/admission/classes/classes_header.php'
 ?>
 
-<h1><u>Grade 1</u></h1>
-<?php
-    //selecting data from the database
-    $sql = "SELECT * FROM `users` WHERE role ='student' AND class = 'grade_1'";
-    #execute query
-    $result = mysqli_query($link, $sql);
+<body>
 
-    #check
-    if ($result) {
+<header>
+    <div class="col-2">
+      <a class="" href="home.html"><img src="../../../images/laravel.png" alt="logo" class="img-fluid logo"></a>
+
+    </div>
+    <div>
+      <h1>JEPPE PRIMARY SCHOOL</h1>
+    </div>
+    <div>
+      <h1>
+      <?php echo $_SESSION['first_name']." ".$_SESSION['second_name']; ?>
+      </h1>
+    </div>
+  </header>
+  <hr>
+  <hr>
+
+<?php
+	$query = $_GET['query']; 
+	// gets value sent over search form
+
+	
+	if($query){ 
+		
+		$query = htmlspecialchars($query); 
+		
+	
+        $sql = "SELECT * FROM `users` WHERE (`first_name` LIKE '%".$query."%') OR (`second_name` LIKE '%".$query."%')";
+		
+        $result=mysqli_query($link,$sql);
+
+		
+			
+		
+		
+	  #check
+      if ($result) {
         $data = mysqli_num_rows($result);
         #is there data here?
         if ($data > 0) {
-    ?>
+            ?>
             <table class="table table-strip m-3 p-2 text-center">
                 <tr>
                     <th>#</th>
@@ -29,9 +59,11 @@ include "./classes_header.php";
                     <th>DELETE</th>
                     <th>UPDATE</th>
                 </tr>
+
                 <?php
 
                 while ($row = mysqli_fetch_array($result)) {
+                    
                     $id = $row['id'];
                     $first_name = $row["first_name"];
                     $second_name = $row["second_name"];
@@ -69,10 +101,10 @@ include "./classes_header.php";
                             <?php echo $role ?>
                         </td>
                         <td>
-                            <a href="delete_class.php?id=<?php echo $id  ?>"><span class='fa fa-trash'></span></a>
+                            <a href="delete_staff.php?id=<?php echo $id  ?>"><span class='fa fa-trash'></span></a>
                         </td>
                         <td>
-                            <a href="update_class.php?id=<?php echo $id  ?>"><span class='fa fa-refresh'></span></a>
+                            <a href="update_profile.php?id=<?php echo $id  ?>"><span class='fa fa-refresh'></span></a>
                         </td>
                     </tr>
 
@@ -81,17 +113,23 @@ include "./classes_header.php";
                 ?>
             </table>
 </div>
-</body>
+
 <?php
         } else {
             echo "no records were found in your database!";
+
         }
+    } else {
+        echo "no query was sent!";
     }
+}
+
+
 ?>
 
-  
 <?php
-include '../../footer.php'
-?> 
+include '../front-end/html/footer.php';
+?>
+
 </body>
 </html>

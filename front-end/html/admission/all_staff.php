@@ -91,10 +91,10 @@ include '../../../backend/handle_login.php'
                             <?php echo $role ?>
                         </td>
                         <td>
-                            <a href="delete.php?id=<?php echo $ID  ?>"><span class='fa fa-trash'></span></a>
+                            <a href="delete_staff.php?id=<?php echo $id  ?>"><span class='fa fa-trash'></span></a>
                         </td>
                         <td>
-                            <a href="update.php?ID=<?php echo $ID  ?>"><span class='fa fa-refresh'></span></a>
+                            <a href="update_profile.php?id=<?php echo $id  ?>"><span class='fa fa-refresh'></span></a>
                         </td>
                     </tr>
 

@@ -1,8 +1,8 @@
 <?php
 
+include "./classes_header.php";
 
-include "../../../backend/config.php";
-include "classes/classes_header.php";
+include "../../../../backend/config.php";
 
 
 
