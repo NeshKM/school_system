@@ -1,7 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../../bootstrap-5.2.2-dist//css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="../../bootstrap-5.2.2-dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/js/all.min.js"
+      integrity="sha512-naukR7I+Nk6gp7p5TMA4ycgfxaZBJ7MO5iC3Fp6ySQyKFHOGfpkSZkYVWV5R7u7cfAicxanwYQ5D1e17EfJcMA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
+    <link rel="stylesheet" href="../../css/styles.css">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
+</head>
+<body>
+<header>
+      <div class="col-2">
+         <a class="" href="home.html"><img src="../../images/laravel.png" alt="logo" class="img-fluid logo"></a>
+
+      </div>
+      <div>
+         <h1>JEPPE PRIMARY SCHOOL</h1>
+      </div>
+      <div>
+         <h1>
+            <?php echo $_SESSION['first_name']." ".$_SESSION['second_name']; ?>
+         </h1>
+      </div>
+   </header>
+   <hr>
+   <hr>
+
 <?php
 
 include "../../../backend/config.php";
-include "classes/classes_header.php";
+// include "classes/classes_header.php";
 session_start();
 
 $sql = "SELECT * FROM `users` ";
