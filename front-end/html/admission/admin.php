@@ -230,7 +230,7 @@ include './admin_header.php';
                                                                 id="password" />
                                                         </div>
                                                         <div class="m-1">
-                                                            Cornfirm Password : <input type="confirm_pass" name="confirm_pass"
+                                                            Cornfirm Password : <input type="password" name="confirm_pass"
                                                                 id="confirm_pass" />
                                                         </div>
                                                 </div>

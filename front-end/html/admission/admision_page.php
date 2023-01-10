@@ -36,7 +36,7 @@ include './admin_header.php';
 
                   <div class="card-header">Admit staff</div>
                   <div class="card-body">
-                     <form action="" class="m-1">
+                     <form action="../../../backend/handle_user_registration.php" method="POST" class="m-1">
                         <div class="m-1">First Name : <input type="text" name="first_name" /></div>
                         <div class="m-1">Second Name : <input type="text" name="second_name" /></div>
                         <div class="m-1">Date of Birth : <input type="date" name="date_of_birth" /></div>
@@ -54,6 +54,9 @@ include './admin_header.php';
                         <div class="m-1">Email : <input type="email" name="email" /></div>
                         <div class="m-1">
                            Password : <input type="password" name="password" id="password" />
+                        </div>
+                        <div class="m-1">
+                           Cornfirm Password : <input type="password" name="confirm_pass" id="confirm_pass" />
                         </div>
                         <div>
                            <label for="role">Role :</label>
@@ -79,7 +82,7 @@ include './admin_header.php';
    <main class="login_page">
 
       <form action="../../backend/handle_user_registration.php" method="POST">
-         <div class="card text-center" style="margin-left: auto;margin-right:auto;">
+         <div class="card text-center " style="margin-left: auto;margin-right:auto;">
 
             <div class="card-header">Registered staff</div>
             <div class="card-body ">
@@ -136,10 +139,25 @@ include './admin_header.php';
                         name="password" required>
                   </div>
                </div>
+               <div class="form-group row m-1">
+                  <label for="confirm_pass" class="col-sm-2 col-form-label col-form-label-lg">Confirm Password </label>
+                  <div class="col-sm-10">
+                     <input type="password" class="form-control form-control-lg" id="confirm_pass" placeholder="Confirm Password"
+                        name="confirm_pass" required>
+                  </div>
+               </div>
+               <div class="form-group row m-1">
+                  <label for="role" class="col-sm-2 col-form-label col-form-label-lg">Role </label>
+                  <div class="col-sm-10">
+                     <select name="role" id="role" class="form-control form-control-lg">
+                        <option value="admin" name="role">Admin</option>
+                        <option value="staff" name="role">Staff</option>
+                     </select>
+                  </div>
+               </div>
 
-               <button type="submit" name="admit" class="btn btn-primary">Admit</button>
+               <button type="submit" name="admit" class="btn btn-primary ">Admit</button>
             </div>
-            <div class="card-footer"><b>Thank you!</b></div>
          </div>
       </form>
    </main>
