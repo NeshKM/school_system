@@ -15,7 +15,7 @@ include "./classes_header.php";
         $data = mysqli_num_rows($result);
         #is there data here?
         if ($data > 0) {
-    ?>
+    ?> 
             <table class="table table-strip m-3 p-2 text-center">
                 <tr>
                     <th>#</th>

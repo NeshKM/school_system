@@ -172,8 +172,8 @@ if (isset($_POST["update"])) {
                     <div class="col-md-12">
 
                         <input class="btn btn-primary col-md-4" type="submit" name="update" value="UPDATE">
-                        <a href="./all_staff.php">Back</a>
-                        <!-- <input  class="btn btn-primary col-md-4" type="button" value="Go back!" onclick="history.back()"> -->
+                        <a  class="btn btn-primary col-md-4" href="./all_staff.php">Back</a>
+                    
 
                     </div>
 

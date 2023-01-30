@@ -10,7 +10,7 @@ include "./classes_header.php";
     #execute query
     $result = mysqli_query($link, $sql);
 
-    #check
+    #check 
     if ($result) {
         $data = mysqli_num_rows($result);
         #is there data here?

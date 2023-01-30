@@ -82,7 +82,7 @@ include "./classes_header.php";
             </table>
 </div>
 </body>
-<?php
+<?php 
         } else {
             echo "no records were found in your database!";
         }

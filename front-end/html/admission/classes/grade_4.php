@@ -11,7 +11,7 @@ include "./classes_header.php";
     $result = mysqli_query($link, $sql);
 
     #check
-    if ($result) {
+    if ($result) { 
         $data = mysqli_num_rows($result);
         #is there data here?
         if ($data > 0) {
